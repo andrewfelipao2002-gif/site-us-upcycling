@@ -158,3 +158,35 @@ body {
   margin-top: auto;
   align-self: center;
 }
+/* seção sobre: texto centralizado, com largura limitada para ficar confortável de ler */
+.sobre {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px 24px;
+  text-align: center;
+}
+
+/* título em verde escuro; margin-bottom dá espaço para o tracinho roxo logo abaixo */
+.sobre h2 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  color: var(--verde-escuro);
+  margin-bottom: 32px;
+  position: relative;              /* permite posicionar o tracinho em relação ao título */
+}
+
+/* tracinho roxo embaixo do título, um detalhe discreto com a cor da logo */
+.sobre h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  background: var(--roxo);
+  border-radius: 999px;
+  margin: 12px auto 0;             /* auto dos lados centraliza o tracinho */
+}
+
+/* parágrafos com espaçamento entre linhas e entre si, para o texto respirar */
+.sobre p {
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
