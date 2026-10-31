@@ -8,11 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- título que aparece na aba do navegador -->
   <title>US Upcycling</title>
-  <!-- liga o arquivo de estilos que vamos criar no próximo passo -->
+  <!-- liga o arquivo de estilos base, que fica na pasta css -->
   <link rel="stylesheet" href="css/base.css">
 </head>
 <body>
-  <!-- header guarda o topo da página, onde fica a logo centralizada -->
+
+  <!-- header guarda o topo da página: logo em cima e menu embaixo -->
   <header class="topo">
     <!-- faixa com a logo centralizada -->
     <div class="topo-logo">
@@ -22,7 +23,7 @@
 
     <!-- nav agrupa os links de navegação do site -->
     <nav class="menu">
-      <!-- href com # leva para uma seção da mesma página (vamos criá-las depois) -->
+      <!-- href com # leva para a seção da mesma página que tem esse id -->
       <a href="#inicio">Início</a>
       <a href="#produtos">Produtos</a>
       <a href="#sobre">Sobre</a>
@@ -30,19 +31,58 @@
     </nav>
   </header>
 
-
-  <!-- main vai receber o conteúdo principal (vitrine) nos próximos passos -->
-    <!-- main guarda o conteúdo principal da página -->
+  <!-- main guarda o conteúdo principal da página -->
   <main>
+
     <!-- section "inicio": é para onde o link "Início" do menu leva (id="inicio") -->
     <section class="boas-vindas" id="inicio">
       <!-- título principal da página -->
       <h1>Peças com história, feitas à mão</h1>
       <!-- texto curto que apresenta o ateliê; depois você pode trocar pelo texto real -->
       <p>Na US Upcycling, materiais que seriam descartados ganham uma nova vida em peças únicas.</p>
-      <!-- botão que leva para a seção de produtos (vamos criá-la depois) -->
+      <!-- botão que leva para a seção de produtos, logo abaixo -->
       <a href="#produtos" class="botao">Ver produtos</a>
     </section>
+
+    <!-- section "produtos": é para onde o link "Produtos" do menu e o botão "Ver produtos" levam -->
+    <section class="produtos" id="produtos">
+      <!-- título da seção -->
+      <h2>Nossos produtos</h2>
+
+      <!-- grade que vai organizar os cartões lado a lado -->
+      <div class="grade-produtos">
+
+        <!-- cartão 1: cada article é um produto; cada um tem o seu próprio botão -->
+        <article class="cartao">
+          <!-- nome da peça (exemplo, troque pelo produto real) -->
+          <h3>Artes Plásticas</h3>
+          <!-- descrição curta da peça -->
+          <p>Artes plásticas são criações feitas principalmente para expressar uma ideia, emoção ou conceito do artista. Pintura, escultura, gravura e desenho são exemplos. O foco está na expressão, e a obra costuma ser única, sem uma função prática.</p>
+                    <!-- wa.me abre o WhatsApp no número dela; ?text= deixa a mensagem pronta (%20 é o espaço) -->
+          <!-- target="_blank" abre em outra aba; rel="noopener noreferrer" é uma proteção de segurança -->
+          <a href="https://wa.me/5585986661247?text=Vamos%20Criar%20Juntos!"
+             class="botao" target="_blank" rel="noopener noreferrer">Vamos Criar!</a>
+        </article>
+
+        <!-- cartão 2 -->
+        <article class="cartao">
+          <h3>Upcycling</h3>
+          <p>O upcycling é uma forma de artesanato que dá nova vida a materiais que seriam descartados, transformando-os em peças novas, com mais valor e muita personalidade.                                                                        </p>
+          <a href="https://wa.me/5585986661247?text=Vamos%20Criar%20Juntos!"
+             class="botao" target="_blank" rel="noopener noreferrer">Vamos Criar!</a>
+        </article>
+
+        <!-- cartão 3 -->
+        <article class="cartao">
+          <h3>Artesanato</h3>
+          <p>Artesanato é a criação de peças feitas à mão, geralmente com função no dia a dia, como bolsas, decoração, utensílios e acessórios. O foco está na técnica, no cuidado manual e na utilidade, e a peça carrega a identidade de quem a fez.</p>
+          <a href="https://wa.me/5585986661247?text=Vamos%20Criar%20Juntos!"
+             class="botao" target="_blank" rel="noopener noreferrer">Vamos Criar!</a>
+        </article>
+
+      </div>
+    </section>
+
   </main>
 </body>
 </html>

@@ -102,3 +102,59 @@ body {
 .botao:hover {
   background: var(--verde-escuro);
 }
+/* seção de produtos: respiro em cima e embaixo, e largura máxima para não esticar demais em telas grandes */
+.produtos {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+/* título da seção centralizado, em verde escuro */
+.produtos h2 {
+  text-align: center;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  color: var(--verde-escuro);
+  margin-bottom: 40px;
+}
+
+/* grid cria colunas automáticas: cada cartão tem no mínimo 260px e divide o espaço que sobrar */
+/* em tela de celular vira 1 coluna sozinho, sem precisar de media query */
+.grade-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* cartão em lilás suave, com borda roxa fininha, cantos arredondados e tudo centralizado (inclusive o botão) */
+.cartao {
+  background: var(--roxo-suave);
+  border: 2px solid var(--roxo);
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  display: flex;                   /* NOVO: organiza o conteúdo do cartão como uma coluna flexível */
+  flex-direction: column;          /* NOVO: título, texto e botão ficam um embaixo do outro */
+  transition: transform 0.2s;      /* suaviza o movimento no hover */
+}
+/* ao passar o mouse, o cartão sobe um pouquinho */
+.cartao:hover {
+  transform: translateY(-4px);
+}
+
+/* nome da peça em verde escuro */
+.cartao h3 {
+  color: var(--verde-escuro);
+  margin-bottom: 12px;
+}
+
+/* descrição com espaço embaixo, para o botão não ficar colado no texto */
+.cartao p {
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+/* margin-top: auto empurra o botão para o fundo do cartão, então todos ficam na mesma linha */
+/* align-self: center mantém o botão centralizado na horizontal */
+.cartao .botao {
+  margin-top: auto;
+  align-self: center;
+}
