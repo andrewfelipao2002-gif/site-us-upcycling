@@ -1,0 +1,38 @@
+/* :root guarda as cores num lugar só; mudou aqui, muda no site inteiro */
+:root {
+  --verde: #7A9A27;          /* verde da logo */
+  --verde-escuro: #3F5014;   /* títulos e textos */
+  --verde-suave: #EEF3DC;    /* fundo de seções */
+  --roxo: #B882C8;           /* roxo da logo */
+  --roxo-escuro: #7B4B8C;    /* hover dos botões */
+  --roxo-suave: #F4EAF8;     /* cartões e destaques */
+  --fundo: #FCFBF7;          /* fundo principal da página */
+}
+
+/* zera as margens padrão e faz padding não aumentar o tamanho dos elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* fundo off-white, texto verde escuro e fonte simples e legível */
+body {
+  background: var(--fundo);
+  color: var(--verde-escuro);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* flex centraliza a logo na horizontal; padding dá respiro em cima e embaixo */
+.topo {
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+/* a logo ocupa até 180px, mas diminui sozinha em telas pequenas */
+.logo {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+}
