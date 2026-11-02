@@ -190,3 +190,58 @@ body {
   line-height: 1.7;
   margin-bottom: 16px;
 }
+/* seção contato: centralizada, com largura máxima e respiro em cima e embaixo */
+.contato {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 64px 24px 80px;
+  text-align: center;
+}
+
+/* título em verde escuro, com o mesmo tracinho roxo da seção Sobre */
+.contato h2 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  color: var(--verde-escuro);
+  margin-bottom: 16px;
+}
+
+/* texto de apresentação, com espaço embaixo antes dos cartões de contato */
+.contato p {
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+/* lista dos três contatos: lado a lado e quebra de linha sozinha em tela pequena */
+.contato-lista {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* cada contato é um cartão lilás suave com borda roxa, igual aos cartões de produtos */
+/* flex em coluna deixa o rótulo em cima e o dado embaixo, os dois centralizados */
+/* cada contato vira um círculo pequeno em lilás suave com borda roxa; o ícone fica no centro */
+.contato-item {
+  display: flex;
+  align-items: center;             /* centraliza o ícone na vertical */
+  justify-content: center;         /* centraliza o ícone na horizontal */
+  width: 72px;
+  height: 72px;
+  background: var(--roxo-suave);
+  border: 2px solid var(--roxo);
+  border-radius: 50%;              /* 50% transforma o quadrado em círculo */
+  transition: transform 0.2s, border-color 0.2s;   /* suaviza o hover */
+}
+
+/* ao passar o mouse, o círculo sobe um pouquinho e a borda escurece */
+.contato-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--roxo-escuro);
+}
+
+/* ícone pequeno dentro do círculo; os 256px originais viram 36px */
+.contato-icone {
+  width: 36px;
+  height: 36px;
+}
